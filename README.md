@@ -38,4 +38,30 @@ composition before paying for a 300M-parameter run.
 
 Raw evidence is in `benchmark_interleaved_h100_b64.json` and
 `structured_factor_results.json`. Earlier kernel variants and the first
-confounded learning run are retained as negative controls.
+confounded learning run are retained as negative controls
+(`benchmark_h100*.json` for the route-block sweep and shift variants;
+`structured_results.json` for the confounded learning run, in which both
+models sat at chance on held-out pairs).
+
+## Reproduce
+
+Requires PyTorch with CUDA (results above are H100 PCIe, BF16; the
+correctness test also runs on CPU in FP32).
+
+```bash
+# numerical correctness of the routed kernel vs references
+python test_correctness.py
+
+# performance gate: route-block granularity sweep
+python benchmark.py --route-block 64 --output benchmark_b64.json
+
+# interleaved confirmation at the chosen granularity (the headline numbers)
+python benchmark_interleaved.py --route-block 64
+
+# capability gate, 5 seeds (the headline 66.06% vs 63.38%)
+python structured_test.py --output structured_factor_results.json
+```
+
+## License
+
+MIT.
