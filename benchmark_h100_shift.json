@@ -1,0 +1,144 @@
+{
+  "gpu": "NVIDIA H100 PCIe",
+  "torch": "2.7.1+cu128",
+  "d_model": 4096,
+  "width": 14336,
+  "cases": [
+    {
+      "tokens": 1,
+      "baseline": {
+        "p50_ms": 0.23296000063419342,
+        "p95_ms": 0.23449599742889404,
+        "mean_ms": 0.23291560001671313,
+        "peak_allocated_mb": 368.09130859375
+      },
+      "routed_identity": {
+        "p50_ms": 0.23283199965953827,
+        "p95_ms": 0.2340800017118454,
+        "mean_ms": 0.23284480012953282,
+        "peak_allocated_mb": 368.09130859375
+      },
+      "routed_mixed": {
+        "p50_ms": 0.23284800350666046,
+        "p95_ms": 0.2346239984035492,
+        "mean_ms": 0.23277839981019496,
+        "peak_allocated_mb": 368.09130859375
+      },
+      "identity_overhead_pct": -0.054945473174228265,
+      "mixed_overhead_pct": -0.04807568991589406,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 8,
+      "baseline": {
+        "p50_ms": 0.23627199977636337,
+        "p95_ms": 0.23900799453258514,
+        "mean_ms": 0.23659279979765416,
+        "peak_allocated_mb": 464.72607421875
+      },
+      "routed_identity": {
+        "p50_ms": 0.2364960014820099,
+        "p95_ms": 0.23891200125217438,
+        "mean_ms": 0.23719639964401723,
+        "peak_allocated_mb": 464.72607421875
+      },
+      "routed_mixed": {
+        "p50_ms": 0.23603200167417526,
+        "p95_ms": 0.23766399919986725,
+        "mean_ms": 0.23605960011482238,
+        "peak_allocated_mb": 464.72607421875
+      },
+      "identity_overhead_pct": 0.0948067083101467,
+      "mixed_overhead_pct": -0.10157703935095297,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 32,
+      "baseline": {
+        "p50_ms": 0.23971199989318848,
+        "p95_ms": 0.2417919933795929,
+        "mean_ms": 0.2399611994624138,
+        "peak_allocated_mb": 530.90283203125
+      },
+      "routed_identity": {
+        "p50_ms": 0.23998399823904037,
+        "p95_ms": 0.24128000438213348,
+        "mean_ms": 0.24000319931656122,
+        "peak_allocated_mb": 530.90283203125
+      },
+      "routed_mixed": {
+        "p50_ms": 0.23977600038051605,
+        "p95_ms": 0.24131199717521667,
+        "mean_ms": 0.23991360031068326,
+        "peak_allocated_mb": 530.90283203125
+      },
+      "identity_overhead_pct": 0.11346880672351567,
+      "mixed_overhead_pct": 0.026698908421818324,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 512,
+      "baseline": {
+        "p50_ms": 0.4049760103225708,
+        "p95_ms": 0.40726399421691895,
+        "mean_ms": 0.4054344013333321,
+        "peak_allocated_mb": 638.43798828125
+      },
+      "routed_identity": {
+        "p50_ms": 0.4325439929962158,
+        "p95_ms": 0.43884798884391785,
+        "mean_ms": 0.4330327995121479,
+        "peak_allocated_mb": 638.43798828125
+      },
+      "routed_mixed": {
+        "p50_ms": 0.4588800072669983,
+        "p95_ms": 0.46668800711631775,
+        "mean_ms": 0.46004399955272673,
+        "peak_allocated_mb": 638.43798828125
+      },
+      "identity_overhead_pct": 6.807312524928721,
+      "mixed_overhead_pct": 13.31041730138336,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 4096,
+      "baseline": {
+        "p50_ms": 3.3293120861053467,
+        "p95_ms": 3.4848639965057373,
+        "mean_ms": 3.3237984418869018,
+        "peak_allocated_mb": 1028.00048828125
+      },
+      "routed_identity": {
+        "p50_ms": 3.389311909675598,
+        "p95_ms": 3.395616054534912,
+        "mean_ms": 3.389951968193054,
+        "peak_allocated_mb": 1028.00048828125
+      },
+      "routed_mixed": {
+        "p50_ms": 3.416943907737732,
+        "p95_ms": 3.4206080436706543,
+        "mean_ms": 3.417735993862152,
+        "peak_allocated_mb": 1028.00048828125
+      },
+      "identity_overhead_pct": 1.8021687969913325,
+      "mixed_overhead_pct": 2.6321299825904143,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    }
+  ],
+  "timestamp": 1784747733.9317057
+}

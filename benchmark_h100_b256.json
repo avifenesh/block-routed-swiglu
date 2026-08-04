@@ -1,0 +1,63 @@
+{
+  "gpu": "NVIDIA H100 PCIe",
+  "torch": "2.7.1+cu128",
+  "d_model": 4096,
+  "width": 14336,
+  "cases": [
+    {
+      "tokens": 512,
+      "baseline": {
+        "p50_ms": 0.40220800042152405,
+        "p95_ms": 0.407584011554718,
+        "mean_ms": 0.40287920013070105,
+        "peak_allocated_mb": 414.05517578125
+      },
+      "routed_identity": {
+        "p50_ms": 0.4206240028142929,
+        "p95_ms": 0.4382399916648865,
+        "mean_ms": 0.42297999933362007,
+        "peak_allocated_mb": 414.05517578125
+      },
+      "routed_mixed": {
+        "p50_ms": 0.42211200296878815,
+        "p95_ms": 0.43830400705337524,
+        "mean_ms": 0.4255447991192341,
+        "peak_allocated_mb": 414.05517578125
+      },
+      "identity_overhead_pct": 4.578726025705215,
+      "mixed_overhead_pct": 4.948683896492412,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 4096,
+      "baseline": {
+        "p50_ms": 3.2338879108428955,
+        "p95_ms": 3.246335983276367,
+        "mean_ms": 3.2117279887199404,
+        "peak_allocated_mb": 832.43798828125
+      },
+      "routed_identity": {
+        "p50_ms": 3.4827840328216553,
+        "p95_ms": 3.4855360984802246,
+        "mean_ms": 3.4816240072250366,
+        "peak_allocated_mb": 832.43798828125
+      },
+      "routed_mixed": {
+        "p50_ms": 3.389232039451599,
+        "p95_ms": 3.3953919410705566,
+        "mean_ms": 3.390177571773529,
+        "peak_allocated_mb": 832.43798828125
+      },
+      "identity_overhead_pct": 7.696498111274552,
+      "mixed_overhead_pct": 4.803633672269547,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    }
+  ],
+  "timestamp": 1784747776.937026
+}

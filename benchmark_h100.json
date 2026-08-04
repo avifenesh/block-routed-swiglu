@@ -1,0 +1,144 @@
+{
+  "gpu": "NVIDIA H100 PCIe",
+  "torch": "2.7.1+cu128",
+  "d_model": 4096,
+  "width": 14336,
+  "cases": [
+    {
+      "tokens": 1,
+      "baseline": {
+        "p50_ms": 0.23257600516080856,
+        "p95_ms": 0.2361920028924942,
+        "mean_ms": 0.23328239992260932,
+        "peak_allocated_mb": 368.09375
+      },
+      "routed_identity": {
+        "p50_ms": 0.23283199965953827,
+        "p95_ms": 0.23507200181484222,
+        "mean_ms": 0.23294280022382735,
+        "peak_allocated_mb": 368.09375
+      },
+      "routed_mixed": {
+        "p50_ms": 0.23294399678707123,
+        "p95_ms": 0.23472000658512115,
+        "mean_ms": 0.2330647999420762,
+        "peak_allocated_mb": 368.09375
+      },
+      "identity_overhead_pct": 0.11006917869824662,
+      "mixed_overhead_pct": 0.15822424415976588,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 8,
+      "baseline": {
+        "p50_ms": 0.23678400367498398,
+        "p95_ms": 0.23929600417613983,
+        "mean_ms": 0.23699159920215607,
+        "peak_allocated_mb": 464.74609375
+      },
+      "routed_identity": {
+        "p50_ms": 0.2375520020723343,
+        "p95_ms": 0.23919999599456787,
+        "mean_ms": 0.23813680093735456,
+        "peak_allocated_mb": 464.74609375
+      },
+      "routed_mixed": {
+        "p50_ms": 0.23705599457025528,
+        "p95_ms": 0.2391359955072403,
+        "mean_ms": 0.23694439958781005,
+        "peak_allocated_mb": 464.74609375
+      },
+      "identity_overhead_pct": 0.3243455577364385,
+      "mixed_overhead_pct": 0.11486877958388764,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 32,
+      "baseline": {
+        "p50_ms": 0.2407199963927269,
+        "p95_ms": 0.24236799776554108,
+        "mean_ms": 0.24148480035364628,
+        "peak_allocated_mb": 530.984375
+      },
+      "routed_identity": {
+        "p50_ms": 0.24108800292015076,
+        "p95_ms": 0.24217599630355835,
+        "mean_ms": 0.24110720064491034,
+        "peak_allocated_mb": 530.984375
+      },
+      "routed_mixed": {
+        "p50_ms": 0.2412159964442253,
+        "p95_ms": 0.24236799776554108,
+        "mean_ms": 0.24126599915325642,
+        "peak_allocated_mb": 530.984375
+      },
+      "identity_overhead_pct": 0.15287742312171115,
+      "mixed_overhead_pct": 0.20604854558454733,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 512,
+      "baseline": {
+        "p50_ms": 0.4031199961900711,
+        "p95_ms": 0.41068801283836365,
+        "mean_ms": 0.4046055987477303,
+        "peak_allocated_mb": 639.75
+      },
+      "routed_identity": {
+        "p50_ms": 0.4312639981508255,
+        "p95_ms": 0.43276798725128174,
+        "mean_ms": 0.42658079862594606,
+        "peak_allocated_mb": 639.75
+      },
+      "routed_mixed": {
+        "p50_ms": 0.44521600008010864,
+        "p95_ms": 0.4487360119819641,
+        "mean_ms": 0.4444439999759197,
+        "peak_allocated_mb": 639.75
+      },
+      "identity_overhead_pct": 6.981544509512383,
+      "mixed_overhead_pct": 10.442549188304028,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    },
+    {
+      "tokens": 4096,
+      "baseline": {
+        "p50_ms": 3.321616053581238,
+        "p95_ms": 3.414367914199829,
+        "mean_ms": 3.3054800033569336,
+        "peak_allocated_mb": 1038.0
+      },
+      "routed_identity": {
+        "p50_ms": 3.472928047180176,
+        "p95_ms": 3.4740800857543945,
+        "mean_ms": 3.4721984267234802,
+        "peak_allocated_mb": 1038.0
+      },
+      "routed_mixed": {
+        "p50_ms": 3.471808075904846,
+        "p95_ms": 3.474623918533325,
+        "mean_ms": 3.4451680064201353,
+        "peak_allocated_mb": 1038.0
+      },
+      "identity_overhead_pct": 4.555372781143663,
+      "mixed_overhead_pct": 4.521655119100143,
+      "cuda_graph_capture": {
+        "baseline": true,
+        "routed": true
+      }
+    }
+  ],
+  "timestamp": 1784747677.7861617
+}

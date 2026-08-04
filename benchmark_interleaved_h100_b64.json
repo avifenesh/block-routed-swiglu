@@ -1,0 +1,93 @@
+{
+  "gpu": "NVIDIA H100 PCIe",
+  "cases": [
+    {
+      "tokens": 512,
+      "route_block": 64,
+      "trials": [
+        {
+          "baseline": 0.42028801143169403,
+          "identity": 0.42395199835300446,
+          "routed": 0.42454400658607483,
+          "identity_overhead_pct": 0.8717800226633265,
+          "routed_overhead_pct": 1.0126377718657542
+        },
+        {
+          "baseline": 0.43292801082134247,
+          "identity": 0.43486399948596954,
+          "routed": 0.43487998843193054,
+          "identity_overhead_pct": 0.44718489361641467,
+          "routed_overhead_pct": 0.45087810485739954
+        },
+        {
+          "baseline": 0.4695360064506531,
+          "identity": 0.4731520116329193,
+          "routed": 0.47302401065826416,
+          "identity_overhead_pct": 0.7701230858950581,
+          "routed_overhead_pct": 0.7428619231947264
+        },
+        {
+          "baseline": 0.45769599080085754,
+          "identity": 0.46136000752449036,
+          "routed": 0.46091198921203613,
+          "identity_overhead_pct": 0.800535027021243,
+          "routed_overhead_pct": 0.7026494607373257
+        },
+        {
+          "baseline": 0.46275201439857483,
+          "identity": 0.4661119878292084,
+          "routed": 0.46620799601078033,
+          "identity_overhead_pct": 0.7260851008937141,
+          "routed_overhead_pct": 0.7468323215614969
+        }
+      ],
+      "mean_identity_overhead_pct": 0.7231416260179513,
+      "mean_routed_overhead_pct": 0.7311719164433406,
+      "stdev_routed_overhead_pct": 0.1993634141510547
+    },
+    {
+      "tokens": 4096,
+      "route_block": 64,
+      "trials": [
+        {
+          "baseline": 3.5755679607391357,
+          "identity": 3.515776038169861,
+          "routed": 3.533455967903137,
+          "identity_overhead_pct": -1.6722356623006251,
+          "routed_overhead_pct": -1.1777707289695405
+        },
+        {
+          "baseline": 3.470128059387207,
+          "identity": 3.5083999633789062,
+          "routed": 3.5086079835891724,
+          "identity_overhead_pct": 1.102896012386867,
+          "routed_overhead_pct": 1.1088906098975615
+        },
+        {
+          "baseline": 3.5720160007476807,
+          "identity": 3.6059999465942383,
+          "routed": 3.6054080724716187,
+          "identity_overhead_pct": 0.9513939982196185,
+          "routed_overhead_pct": 0.9348242481822089
+        },
+        {
+          "baseline": 3.471008062362671,
+          "identity": 3.5139360427856445,
+          "routed": 3.5465279817581177,
+          "identity_overhead_pct": 1.2367583034005758,
+          "routed_overhead_pct": 2.1757344851582205
+        },
+        {
+          "baseline": 3.4703201055526733,
+          "identity": 3.5095680952072144,
+          "routed": 3.5092639923095703,
+          "identity_overhead_pct": 1.1309616537028555,
+          "routed_overhead_pct": 1.1221986898149572
+        }
+      ],
+      "mean_identity_overhead_pct": 0.5499548610818583,
+      "mean_routed_overhead_pct": 0.8327754608166815,
+      "stdev_routed_overhead_pct": 1.2264026926710077
+    }
+  ]
+}
