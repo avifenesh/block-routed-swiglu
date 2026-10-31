@@ -27,7 +27,7 @@ channels and interleaving measurements to remove ordering/clock bias:
 The equal-parameter synthetic capability test did **not** show a model-quality
 gain across five seeds:
 
-- structured held-out combinations: baseline `66.06%`, routed `63.38%`;
+- structured held-out combinations: baseline `66.05%`, routed `63.38%`;
 - random lookup held-out combinations: baseline `50.28%`, routed `50.42%`.
 
 So the inexpensive routing mechanism is viable, but this routing/training rule
@@ -58,7 +58,7 @@ python benchmark.py --route-block 64 --output benchmark_b64.json
 # interleaved confirmation at the chosen granularity (the headline numbers)
 python benchmark_interleaved.py --route-block 64
 
-# capability gate, 5 seeds (the headline 66.06% vs 63.38%)
+# capability gate, 5 seeds (the headline 66.05% vs 63.38%)
 python structured_test.py --output structured_factor_results.json
 ```
 
